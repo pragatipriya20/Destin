@@ -1,0 +1,38 @@
+{% extends 'dating/base.html' %}
+{% load static %}
+{% block content %}
+<div class="card-pending">
+  <div class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{user.userprofile.image.url}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body mySlides">
+          <h2 class="card-title">{{user.userprofile.first_name}} {{user.userprofile.last_name}}</h2>
+          <p class="card-text"> {{user.userprofile.bio}}</p>
+          <p class="card-text"><small class="text-body-secondary">AGE : {{user.userprofile.age}} </small></p>
+          <p class="card-text"><small class="text-body-secondary">GENDER : {{user.userprofile.gender}}</small></p> <br>
+          <p class="card-text"><small class="text-body-secondary">You have matched on the basis of :</small></p>
+          <span><h4>90% match</h4></span>
+          <button type="button" class="btn btn-light" style="margin-top: 3%; background-color: #b65ba8;">Match</button>
+          <button type="button" class="btn btn-light" style="margin-top: 3%; margin-left: 10%; background-color: #727ac5">Pass </button>
+        </div>
+        <div class="card-body mySlides">
+          <h2 class="card-title">Pragati</h2>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Age:</small></p>
+          <p class="card-text"><small class="text-body-secondary">Gender:</small></p> <br>
+          <p class="card-text"><small class="text-body-secondary">You have matched on the basis of :</small></p>
+          <span><h4>90% match</h4></span>
+          <button type="button" class="btn btn-light" style="margin-top: 3%; background-color: #b65ba8;">Match</button>
+          <button type="button" class="btn btn-light" style="margin-top: 3%; margin-left: 10%; background-color: #727ac5">Pass </button>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

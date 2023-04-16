@@ -1,0 +1,44 @@
+{% extends 'dating/base.html' %}
+{% block content %}
+<!-- <h1>this is dash board for {{user.email}} </h1> -->
+<div>
+    <div class="profile-section">
+        <div class="profile-pic">
+            <img src="{{user.userprofile.image.url}}" class="img-fluid rounded-start " alt="...">
+        </div>
+        
+        <h2 class="profile-text">{{user.userprofile.first_name}} {{user.userprofile.last_name}}</h2>
+        <p class="profile-text"><small class="text-body-secondary">{{user.userprofile.bio}}</small></p>
+        <h4 class="profile-text">Your Interests</h4>
+        <ul class="interest-items">
+            <li>Interest-1</li>
+            <li>I2</li>
+            <li>I3</li>
+            <li>I4</li>
+            <li>I5</li>
+        </ul>
+        <button type="button" class="btn btn-light edit-profile-btn" style="margin-top: 3%; background-color: #b65ba8;">Edit Your Profile</button>
+    </div>
+    <div class="matches-div">
+        <h1>Matches 0</h1>
+    </div>
+    <div class="pending-div">
+        <h1>Pending 0</h1>
+    </div>
+    <div>
+        <div id="dropdown" class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Choose Your Interest
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-light matching-btn" style="margin-top: 3%; background-color: #b65ba8;">Start Matching</button>
+    </div>
+
+</div>
+
+{% endblock %}

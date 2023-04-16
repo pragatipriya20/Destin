@@ -1,0 +1,15 @@
+{% extends "dating/base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form  method = "POST" >
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Complete your Profile</legend>
+                {{form }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-primary" type ="submit">finish set up</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
